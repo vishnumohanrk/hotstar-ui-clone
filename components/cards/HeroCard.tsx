@@ -23,7 +23,13 @@ const HeroCard = ({ categories, description, coverImg, title, year }: ITitleDeta
         ) : null}
       </div>
       <div className="hidden md:block w-64 h-full absolute right-heroCardGradientWidth top-0 bg-gradient-to-r from-bg3 to-transparent"></div>
-      <img className="w-full md:w-55% object-cover rounded-md" src={coverImg} alt={title} loading="lazy" />
+      <img
+        className="w-full md:w-55% object-cover rounded-md"
+        key={coverImg}
+        src={coverImg}
+        alt={title}
+        loading="lazy"
+      />
     </div>
   );
 };
